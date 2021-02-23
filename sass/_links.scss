@@ -1,0 +1,153 @@
+.links {
+		
+	&__desc{
+		color: $color-primary-light;
+		font-size:2rem;
+		font-family: $font-display;
+		position:relative;
+		left:2rem;
+		top:1rem;
+		grid-column:1/5;
+		text-align:center;
+	}
+	&__info{
+		margin-left: 3.5rem;
+	}
+	background-size:cover;
+	background-image: linear-gradient(to top right, rgba($primary-dark-rgba,.9),rgba($color-primary,.7)),url(/img/microchipbg.jpg);
+	grid-column: col-start 7 / full-end;
+	justify-content: middle;
+	vertical-align:center;
+	&__heading{
+		font-family: 'Roboto';
+		letter-spacing: 2;
+		font-size: 4rem;
+		font-weight:700;
+		text-align:center;
+		display:block;
+		padding:1.5rem 0;
+		background-image: linear-gradient(to top,rgba($color-primary-light,.1),(rgba($color-primary-light,1)));
+	}
+
+	&__list
+	{
+
+	position: relative;
+	top: 0;
+	display: grid;
+	width:80%;
+	margin-left:auto;
+	margin-right:auto;
+	grid-template-columns: 25% 25% 25% 25% ;
+	grid-template-rows: 25% 25% 25% 25%;
+	grid-column-gap:.5rem;
+	}
+	
+	&__link,
+	&__img{
+
+		border-radius: 20%;
+		grid-column: 1/2;
+		width:100%;
+		/*&--kraken{
+			grid-column: 4 / span 2;
+			grid-row: 1 / 2;
+		}*/
+		transition: all .3s;
+		&--bandcamp{
+			margin-left: 8rem;
+			grid-column: 2/ span 1;
+			grid-row: 4/5;
+			transform: translateY(3rem);
+			opacity: .7;
+		}
+		&--bandcamp:hover{
+			opacity: 1.2;
+			filter:blur(1px);
+		}
+		&--soundcloud {
+			background-color: rgba($color-primary,.5);
+			opacity: .7;
+			margin-top: 5rem;
+			grid-column: 1/ span 1;
+			grid-row: 4 / span 1
+		}
+		&--soundcloud:hover{
+			opacity:1.2;
+			filter:blur(1px);
+		}
+		&--member{
+			border: 3px solid $color-primary;
+			margin-top:3rem;
+			margin-right: 4rem;
+			grid-column: 2 / 4;
+			grid-row: 5/6;
+			opacity: .7;
+		}
+		&--member:hover{
+			opacity:1.2;
+			filter:blur(1px);
+		}
+		&--memes{
+			grid-column: 2 / 3;
+			grid-row: 1/2;
+			opacity:0.7;
+		}	
+		&--memes:hover{
+			opacity:1.2;
+			filter:blur(1px);
+		}
+		&--experience{
+			grid-column: 3 / 4;
+			grid-row: 1/2;
+			opacity:0.7;
+		}
+		&--experience:hover{
+			opacity:1.2;
+			filter:blur(1px);
+		}
+		&--blog{
+			grid-column:4 / span 1;
+			grid-row: 1/2;	
+
+			opacity:0.7;		
+		}
+		&--blog:hover{
+			opacity:1.2;
+			filter:blur(1px);
+		}
+		&--crypto{
+			grid-column:1 / span 1;
+			grid-row: 1/2;
+			opacity: .7;		
+		}
+		&--crypto:hover{
+			opacity:1.2;
+			filter:blur(1px);
+		}
+	}
+	&__info{	
+		background-color:rgba($color-secondary-light,.7);
+		height: 15vh;
+		width: 90%;
+		margin-top:1rem;
+		margin-left:auto;
+		margin-right:auto;
+		border-radius: 50px;
+
+		&--heading-3{
+			text-align:center;
+			font-size:1.2rem;
+			padding:1.4rem;
+			color:$color-primary-dark;
+		}
+		&--content{
+			color: $color-primary;
+			font-size:1.4rem;
+			font-weight:400;
+			padding:0 1rem;
+			font-family: $font-display;
+		}
+		}
+}
+

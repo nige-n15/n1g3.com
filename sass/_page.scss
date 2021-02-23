@@ -1,0 +1,130 @@
+
+
+.crypto-page{
+	width:100%;
+	display:grid;
+
+}
+.page{
+	width: 100%;
+
+	padding: 2rem;
+	display:flex;
+	flex-direction:column;
+	
+	&__content{
+
+		display:grid;
+		grid-template-rows: 5vh 5vh 30vh 30vh 20vh 10vh;
+		grid-template-columns: 1fr;
+		&--links{
+			display:flex;
+			justify-content: start;
+		}
+	}
+	&__heading--1{
+		color: $color-primary;
+		padding: 2rem;
+		border-radius:50px;
+		background-color: $color-secondary;
+		text-align:center;
+	}
+
+	&__heading--2{
+		text-align:center;
+		text-transform: uppercase;
+		color: $color-secondary;
+		padding: 2rem;
+		border-radius:50px;
+		background-color: $color-primary-dark;
+	}
+	&__content p{
+		margin-top:1rem;
+		font-family: $font-display;
+		font-size: 1.6rem;
+		color: $color-primary-light;
+		padding: 2rem;
+		border-radius:25px;
+		background-color:rgba(#000,.8);
+	}
+
+	&__content--post{
+		display:grid;
+		grid-template-rows: 10% 30% 60%;
+
+
+	}
+
+	button {
+		width:40%;
+		margin:1rem 5rem;
+	}
+	&__memes{
+		display:grid;
+		grid-template-columns:repeat(3,1fr);
+		grid-template-rows: repeat(12,1fr);
+	}
+	&__meme{
+		background-color: $color-primary-dark;
+		align-self:center;
+		justify-content:space-between;
+		border-radius:50px;
+		padding:2rem;
+	}
+	&__meme img{
+		width:100%;
+
+		margin-left:2rem 5rem;
+		border-radius:10px;
+
+	}
+	&__meme p{
+		text-align:center;
+		font-family:$font-display;
+		color: $color-secondary;
+		font-weight:500;
+		font-size:1.5rem;
+		opacity: .5;	
+	}
+	&__meme--3{
+		grid-column:3/4;
+		grid-row:2 /6;
+	}
+	&__meme--7{
+		grid-column:3/4;
+		grid-row:2/3;
+	}
+	&__meme--crying{
+		grid-column:3/4;
+		grid-row:5/6;
+	}
+	&__meme--rebel{
+		transform: translateY(-230rem);
+		grid-column: 2 / 4;
+		grid-row: 10/11;
+	}
+	&__meme--veg{
+		grid-column: 1 / 2;
+		grid-row: 9/10;
+	}
+	&__meme--robin{
+		grid-column:2/3;
+		align-self:start;
+		grid-row:9/10;
+		padding-top:7.5rem;
+		img {
+				transform: rotate(90deg);			
+		}
+		p a:link, a:visited {
+			text-decoration:none;
+			color: $color-secondary;
+		}
+		
+	}
+	&__meme--note{
+		transform: translateY(-140rem);
+		grid-row: 9/10;
+		grid-column: 3/4;
+	}
+}
+

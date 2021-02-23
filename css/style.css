@@ -1,0 +1,824 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #6D5D4B;
+  font-weight: 300;
+  line-height: 1.6; }
+
+.container {
+  background-color: rgba(39, 9, 80, 0.3);
+  display: grid;
+  grid-template-rows: 85vh min-content 40vw repeat(4, min-content);
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(3rem, 1fr) [center-start] repeat(9, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] 1fr [full-end]; }
+
+.pagecontainer {
+  background-color: #BCFE77;
+  display: grid;
+  grid-template-rows: 25% 50% 10% 100%;
+  grid-template-columns: [sidebar-start] 4rem [sidebar-end full-start] minmax(15rem, 1fr) [full-end]; }
+
+.cryptocontainer {
+  display: grid;
+  grid-template-rows: 25% 50% 10% 100%;
+  grid-template-columns: [sidebar-start] 4rem [sidebar-end full-start] minmax(15rem, 1fr) [full-end]; }
+
+.heading-1, .heading-2, .heading-2--bold, .heading-3, .heading-4 {
+  font-family: "Museo", sans-serif;
+  font-weight: 400; }
+
+.heading-1 {
+  font-size: 3rem;
+  color: #f9f7f6;
+  line-height: 1; }
+
+.heading-2 {
+  font-size: 2.5rem;
+  font-style: italic; }
+  .heading-2--bold {
+    font-weight: 500;
+    font-style: none;
+    font-size: 2.5rem; }
+  .heading-2--light {
+    color: #f9f7f6; }
+  .heading-2--dark {
+    color: #54483A; }
+
+.heading-3 {
+  font-size: 1.6rem;
+  color: #6e36f2;
+  text-transform: uppercase;
+  line-height: 1; }
+  .heading-3--light {
+    color: #f9f7f6; }
+
+.heading-4 {
+  font-size: 1.9rem; }
+  .heading-4--light {
+    color: #f9f7f6; }
+  .heading-4--dark {
+    color: #54483A; }
+
+.btn {
+  background-color: #BCFE77;
+  color: #6e36f2;
+  border: none;
+  border-radius: 0;
+  font-family: "Museo", sans-serif;
+  font-size: 1.5rem;
+  pointer: cursor;
+  text-transform: uppercase;
+  padding: 1.8rem 3rem;
+  transition: all .2s;
+  cursor: pointer; }
+  .btn:hover {
+    background-color: #270950; }
+
+.mb-sm {
+  margin-bottom: 2rem; }
+
+.mb-md {
+  margin-bottom: 3rem; }
+
+.mb-lg {
+  margin-bottom: 4rem; }
+
+.mb-xl {
+  margin-bottom: 8rem; }
+
+.crypto-page {
+  width: 100%;
+  display: grid; }
+
+.page {
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column; }
+  .page__content {
+    display: grid;
+    grid-template-rows: 5vh 5vh 30vh 30vh 20vh 10vh;
+    grid-template-columns: 1fr; }
+    .page__content--links {
+      display: flex;
+      justify-content: start; }
+  .page__heading--1 {
+    color: #6e36f2;
+    padding: 2rem;
+    border-radius: 50px;
+    background-color: #90fe1d;
+    text-align: center; }
+  .page__heading--2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #90fe1d;
+    padding: 2rem;
+    border-radius: 50px;
+    background-color: #270950; }
+  .page__content p {
+    margin-top: 1rem;
+    font-family: "Museo", sans-serif;
+    font-size: 1.6rem;
+    color: #f9f7f6;
+    padding: 2rem;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.8); }
+  .page__content--post {
+    display: grid;
+    grid-template-rows: 10% 30% 60%; }
+  .page button {
+    width: 40%;
+    margin: 1rem 5rem; }
+  .page__memes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(12, 1fr); }
+  .page__meme {
+    background-color: #270950;
+    align-self: center;
+    justify-content: space-between;
+    border-radius: 50px;
+    padding: 2rem; }
+  .page__meme img {
+    width: 100%;
+    margin-left: 2rem 5rem;
+    border-radius: 10px; }
+  .page__meme p {
+    text-align: center;
+    font-family: "Museo", sans-serif;
+    color: #90fe1d;
+    font-weight: 500;
+    font-size: 1.5rem;
+    opacity: .5; }
+  .page__meme--3 {
+    grid-column: 3/4;
+    grid-row: 2 /6; }
+  .page__meme--7 {
+    grid-column: 3/4;
+    grid-row: 2/3; }
+  .page__meme--crying {
+    grid-column: 3/4;
+    grid-row: 5/6; }
+  .page__meme--rebel {
+    transform: translateY(-230rem);
+    grid-column: 2 / 4;
+    grid-row: 10/11; }
+  .page__meme--veg {
+    grid-column: 1 / 2;
+    grid-row: 9/10; }
+  .page__meme--robin {
+    grid-column: 2/3;
+    align-self: start;
+    grid-row: 9/10;
+    padding-top: 7.5rem; }
+    .page__meme--robin img {
+      transform: rotate(90deg); }
+    .page__meme--robin p a:link, .page__meme--robin a:visited {
+      text-decoration: none;
+      color: #90fe1d; }
+  .page__meme--note {
+    transform: translateY(-140rem);
+    grid-row: 9/10;
+    grid-column: 3/4; }
+
+.sidebar {
+  background-color: #270950;
+  grid-column: sidebar-start / sidebar-end;
+  grid-row: 1 / -1; }
+
+.sidebar svg {
+  margin: 1.5rem 3px;
+  position: absolute;
+  top: 2rem;
+  left: 3.5rem;
+  width: 3.5rem;
+  fill: #6e36f2;
+  transform: scale(0.8);
+  transition: all .2s; }
+
+.sidebar svg:hover {
+  transform: scale(1.2);
+  filter: brightness(1.86);
+  cursor: pointer; }
+
+.header {
+  background-color: #270950;
+  background-image: linear-gradient(to bottom left, rgba(110, 54, 242, 0.9), rgba(39, 9, 80, 0.4)), url(/img/header-bg.png);
+  background-size: cover;
+  background-position: center;
+  grid-column: full-start / col-end 6;
+  display: grid;
+  grid-template-rows: 20% auto-fit(3rem, min-content) 20% 10%;
+  grid-template-columns: 50% 50%;
+  grid-row-gap: 1rem;
+  align-content: start;
+  align-items: end; }
+  .header__kraken {
+    grid-column: 1 /3;
+    margin-top: 2.5rem;
+    grid-row: 6/7;
+    justify-self: center;
+    z-index: 1999; }
+  .header__kraken:hover {
+    filter: brightness(1.5);
+    box-shadow: 0 0 2.5rem 0 #0ff;
+    transform: translateY(-3px); }
+  .header__logo {
+    padding-left: 25rem;
+    margin-top: 2rem;
+    grid-column: 1/3; }
+  .header__content {
+    margin-top: -10rem;
+    margin-left: 3rem;
+    grid-column: 1 /3;
+    padding: 4rem;
+    width: 100%; }
+    .header__content--btn {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 2rem; }
+  .header__content p {
+    text-align: center;
+    font-family: "Museo", sans-serif;
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 4px;
+    background-color: rgba(110, 54, 242, 0.4);
+    border-radius: 25px;
+    margin: 1rem 0rem; }
+  .header__btn {
+    position: relative;
+    display: block;
+    margin: 1rem 0; }
+  .header__tradeon-text {
+    grid-column: 1/ 3;
+    color: #f9f7f6;
+    font-family: "Museo", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    display: grid;
+    margin-top: -2rem;
+    align-items: center;
+    grid-column-gap: 1.5rem;
+    grid-template-columns: 1fr max-content 1fr; }
+    .header__tradeon-text::before, .header__tradeon-text::after {
+      content: "";
+      height: 1px;
+      display: block;
+      background-color: currentColor; }
+  .header__crypto-exchanges {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 1rem;
+    justify-items: center;
+    align-content: center; }
+    .header__crypto-exchanges img {
+      min-height: 4.25rem;
+      height: 8.5rem; }
+
+.crypto__link {
+  stroke: black;
+  transition: all .2s;
+  filter: brightness(1.2); }
+
+.crypto__link:hover {
+  transform: scale(1.125);
+  filter: brightness(1.525);
+  opacity: 1.3;
+  box-shadow: 0 0 2.5rem 0 #0ff; }
+
+.pageheader {
+  height: 11.5vh;
+  width: 100%;
+  background-color: #270950;
+  align-items: center;
+  display: flex; }
+  .pageheader__links {
+    padding: 2rem;
+    width: 60%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+    justify-items: center;
+    justify-content: space-between;
+    grid-gap: 2rem; }
+  .pageheader__logo {
+    margin-left: 5rem;
+    width: 25rem; }
+  .pageheader__link:link, .pageheader__link:visited {
+    font-size: 1.6rem;
+    color: #f9f7f6;
+    text-decoration: none;
+    font-family: "Museo", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1.5rem;
+    dislay: block;
+    background-color: rgba(110, 54, 242, 0.4);
+    transition: all .1s; }
+  .pageheader__link:active, .pageheader__link:hover {
+    box-shadow: 0 0 3.75rem 0 #0ff;
+    color: #90fe1d;
+    transform: translateY(-3px);
+    transform: scale(1.125);
+    filter: brightness(2.525); }
+  .pageheader__link--active {
+    background-color: #90fe1d !important;
+    color: #6e36f2 !important; }
+  .pageheader__link--blog {
+    grid-column: 6/7; }
+  .pageheader__link--crypto {
+    grid-column: 2/5;
+    justify-self: center;
+    width: 100%; }
+
+.links {
+  background-size: cover;
+  background-image: linear-gradient(to top right, rgba(39, 9, 80, 0.9), rgba(110, 54, 242, 0.7)), url(/img/microchipbg.jpg);
+  grid-column: col-start 7 / full-end;
+  justify-content: middle;
+  vertical-align: center; }
+  .links__desc {
+    color: #f9f7f6;
+    font-size: 2rem;
+    font-family: "Museo", sans-serif;
+    position: relative;
+    left: 2rem;
+    top: 1rem;
+    grid-column: 1/5;
+    text-align: center; }
+  .links__info {
+    margin-left: 3.5rem; }
+  .links__heading {
+    font-family: 'Roboto';
+    letter-spacing: 2;
+    font-size: 4rem;
+    font-weight: 700;
+    text-align: center;
+    display: block;
+    padding: 1.5rem 0;
+    background-image: linear-gradient(to top, rgba(249, 247, 246, 0.1), #f9f7f6); }
+  .links__list {
+    position: relative;
+    top: 0;
+    display: grid;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 25% 25% 25% 25%;
+    grid-column-gap: .5rem; }
+  .links__link, .links__img {
+    border-radius: 20%;
+    grid-column: 1/2;
+    width: 100%;
+    /*&--kraken{
+			grid-column: 4 / span 2;
+			grid-row: 1 / 2;
+		}*/
+    transition: all .3s; }
+    .links__link--bandcamp, .links__img--bandcamp {
+      margin-left: 8rem;
+      grid-column: 2/ span 1;
+      grid-row: 4/5;
+      transform: translateY(3rem);
+      opacity: .7; }
+    .links__link--bandcamp:hover, .links__img--bandcamp:hover {
+      opacity: 1.2;
+      filter: blur(1px); }
+    .links__link--soundcloud, .links__img--soundcloud {
+      background-color: rgba(110, 54, 242, 0.5);
+      opacity: .7;
+      margin-top: 5rem;
+      grid-column: 1/ span 1;
+      grid-row: 4 / span 1; }
+    .links__link--soundcloud:hover, .links__img--soundcloud:hover {
+      opacity: 1.2;
+      filter: blur(1px); }
+    .links__link--member, .links__img--member {
+      border: 3px solid #6e36f2;
+      margin-top: 3rem;
+      margin-right: 4rem;
+      grid-column: 2 / 4;
+      grid-row: 5/6;
+      opacity: .7; }
+    .links__link--member:hover, .links__img--member:hover {
+      opacity: 1.2;
+      filter: blur(1px); }
+    .links__link--memes, .links__img--memes {
+      grid-column: 2 / 3;
+      grid-row: 1/2;
+      opacity: 0.7; }
+    .links__link--memes:hover, .links__img--memes:hover {
+      opacity: 1.2;
+      filter: blur(1px); }
+    .links__link--experience, .links__img--experience {
+      grid-column: 3 / 4;
+      grid-row: 1/2;
+      opacity: 0.7; }
+    .links__link--experience:hover, .links__img--experience:hover {
+      opacity: 1.2;
+      filter: blur(1px); }
+    .links__link--blog, .links__img--blog {
+      grid-column: 4 / span 1;
+      grid-row: 1/2;
+      opacity: 0.7; }
+    .links__link--blog:hover, .links__img--blog:hover {
+      opacity: 1.2;
+      filter: blur(1px); }
+    .links__link--crypto, .links__img--crypto {
+      grid-column: 1 / span 1;
+      grid-row: 1/2;
+      opacity: .7; }
+    .links__link--crypto:hover, .links__img--crypto:hover {
+      opacity: 1.2;
+      filter: blur(1px); }
+  .links__info {
+    background-color: rgba(188, 254, 119, 0.7);
+    height: 15vh;
+    width: 90%;
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px; }
+    .links__info--heading-3 {
+      text-align: center;
+      font-size: 1.2rem;
+      padding: 1.4rem;
+      color: #270950; }
+    .links__info--content {
+      color: #6e36f2;
+      font-size: 1.4rem;
+      font-weight: 400;
+      padding: 0 1rem;
+      font-family: "Museo", sans-serif; }
+
+#overlay {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: none; }
+
+#popup {
+  max-width: 600px;
+  width: 80%;
+  max-height: 300px;
+  height: 80%;
+  padding: 20px;
+  position: relative;
+  background: #fff;
+  margin: 20px auto; }
+
+#close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #000; }
+
+.features {
+  grid-column: center-start / center-end;
+  margin: 2rem 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  align-items: start;
+  grid-gap: 2.5rem;
+  margin-left: auto;
+  margin-right: auto; }
+  .features__heading {
+    font-family: "Museo", sans-serif;
+    font-size: 3rem;
+    width: 100%;
+    background-color: #270950;
+    color: #f9f7f6;
+    padding: 6rem;
+    border-radius: 50px;
+    font-weight: 500;
+    text-align: center;
+    align-self: center;
+    vertical-align: center;
+    height: 100%; }
+
+.feature {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(min-content, max-content));
+  background-color: #270950;
+  padding: 2rem 2rem;
+  border-radius: 25px; }
+  .feature__icon {
+    transform: translateY(0.5rem);
+    fill: #6e36f2;
+    height: 4.5rem;
+    width: 4.5rem;
+    grid-row: 1 / span 2;
+    margin-bottom: 2px;
+    margin-right: 2rem; }
+  .feature__text {
+    font-size: 1.7rem;
+    font-family: "Museo", sans-serif;
+    vertical-align: top;
+    color: #f9f7f6; }
+
+.story__pictures {
+  background-image: linear-gradient(to left, rgba(39, 9, 80, 0.3), rgba(128, 72, 255, 0.5)), url(/img/codebg.jpg);
+  background-position: left bottom;
+  background-size: cover;
+  width: 100%;
+  grid-column: full-start / col-end 4;
+  display: grid;
+  grid-template-rows: repeat(6, 1r);
+  grid-template-columns: repeat(6, 1fr); }
+
+.story__img--1 {
+  padding-left: 1rem;
+  width: 125%;
+  grid-row: 3/6;
+  grid-column: 1/5;
+  box-shadow: 0 3rem 7rem rgba(0, 0, 0, 0.5); }
+
+.story__img--2 {
+  width: 115%;
+  grid-row: 4/7;
+  grid-column: 4 / 8;
+  z-index: 20;
+  box-shadow: 0 2rem 6rem rgba(0, 0, 0, 0.25); }
+
+.story__content {
+  background-image: linear-gradient(to left, rgba(128, 72, 255, 0.5), rgba(39, 9, 80, 0.3)), url(/img/satellitebg.jpg);
+  background-position: right bottom;
+  background-size: cover;
+  width: 100%;
+  color: #fff;
+  background-color: #f9f7f6;
+  grid-column: col-start 5 / full-end;
+  padding: 5vh 8vw;
+  display: grid;
+  align-content: center;
+  justify-items: center; }
+
+.story__text {
+  border-radius: 50px;
+  padding: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  background-color: rgba(39, 9, 80, 0.3);
+  font-family: "Museo", sans-serif; }
+
+.cryptopick {
+  background-color: #6e36f2;
+  grid-column: center-start / center-end;
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+  grid-gap: 3rem;
+  width: 100%;
+  grid-column-gap: .5rem; }
+  .cryptopick__provider {
+    margin-top: 30rem;
+    margin-left: 15rem;
+    text-align: center;
+    font-family: "Museo", sans-serif;
+    position: relative;
+    font-size: 2rem; }
+
+.crypto {
+  background-color: #f9f7f6;
+  justify-content: end;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: .5rem; }
+  .crypto__img {
+    width: 50%;
+    margin-top: 1px;
+    height: 100%;
+    grid-column: 1 / -1;
+    grid-row: 1/2;
+    z-index: 11;
+    height: 18rem; }
+  .crypto__logo {
+    justify-self: end;
+    margin: .5rem;
+    z-index: 12;
+    fill: #6e36f2;
+    height: 4.5rem;
+    width: 4.5rem;
+    grid-row: 1/2;
+    grid-column: 2/3; }
+  .crypto__name {
+    width: 80%;
+    grid-column: 1/-1;
+    justify-self: center;
+    font-family: "Museo", sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1.25rem;
+    opacity: .8;
+    background-color: #BCFE77;
+    font-weight: 400;
+    color: #6e36f2;
+    transform: translateY(-75%);
+    z-index: 25; }
+  .crypto__name a {
+    text-decoration: none;
+    pointer: cursor;
+    color: #6e36f2; }
+  .crypto--gecko {
+    margin-top: 5rem;
+    margin-left: 0rem;
+    grid-column: 2/3; }
+  .crypto__price, .crypto__ath {
+    margin-top: -2.5rem; }
+  .crypto__ath, .crypto__quantity {
+    margin-left: -30rem; }
+  .crypto__link:link, .crypto__link:visited {
+    cursor: pointer; }
+  .crypto__price, .crypto__quantity, .crypto__ath, .crypto__mcap {
+    font-weight: 500;
+    font-family: "Museo", sans-serif;
+    font-size: 1.4rem;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center; }
+    .crypto__price svg, .crypto__quantity svg, .crypto__ath svg, .crypto__mcap svg {
+      fill: #6e36f2;
+      height: 2rem;
+      width: 2rem;
+      margin-right: 1rem; }
+  .crypto__btn {
+    grid-column: 1/-1; }
+
+.gallery {
+  margin: 3rem 1rem;
+  grid-column: full-start / full-end;
+  display: grid;
+  grid-template-columns: repeat(16, 0.5fr);
+  grid-template-rows: repeat(18, 1vw);
+  grid-gap: .5rem;
+  padding: 1.5rem; }
+  .gallery__item--1 {
+    grid-row: 14 / span 5;
+    grid-column: 9 / span 4; }
+  .gallery__item--2 {
+    grid-row: 10 / span 4;
+    grid-column: 9 / span 2; }
+  .gallery__item--3 {
+    grid-row: 1 / span 5;
+    grid-column: 8 / span 1; }
+  .gallery__item--4 {
+    grid-row: 4 / span 6;
+    grid-column: 6 / span 2; }
+  .gallery__item--5 {
+    grid-row: 1 / span 7;
+    grid-column: 9 / span 3; }
+  .gallery__item--6 {
+    grid-row: 1 / span 7;
+    grid-column: 1 / span 5; }
+  .gallery__item--7 {
+    grid-row: 8 / span 8;
+    grid-column: 6 / span 1; }
+  .gallery__item--7a {
+    grid-row: 5/ span 5;
+    grid-column: 8 / span 1; }
+  .gallery__item--8 {
+    grid-row: 10 / span 4;
+    grid-column: 11 / span 2; }
+  .gallery__item--9 {
+    grid-row: 7 / span 3;
+    grid-column: 9 / span 2; }
+  .gallery__item--10 {
+    grid-row: 1 / span 5;
+    grid-column: 6 / span 3; }
+  .gallery__item--11 {
+    grid-row: 1 / span 9;
+    grid-column: 12 / span 3; }
+  .gallery__item--12 {
+    grid-row: 13 / span 6;
+    grid-column: 1 / span 6; }
+  .gallery__item--13 {
+    grid-row: 10 / span 9;
+    grid-column: 7 / span 2; }
+  .gallery__item--14 {
+    grid-row: 8 / span 6;
+    grid-column: 1 / span 5; }
+  .gallery__item--15 {
+    grid-row: 1 / span 9;
+    grid-column: 15 / span 4; }
+  .gallery__item--16 {
+    grid-row: 9 / span 10;
+    grid-column: 13 / span 4; }
+  .gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block; }
+
+.footer {
+  z-index: 10000;
+  background-color: #270950;
+  grid-column: 1 / -1;
+  position: fixed;
+  bottom: 0;
+  width: 100%; }
+
+.nav {
+  list-style: none;
+  display: grid;
+  height: 10rem;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 2rem;
+  align-items: center;
+  transition: all .3s;
+  margin-right: 2rem; }
+  .nav__link:link, .nav__link:visited {
+    font-size: 1.5rem;
+    color: #6e36f2;
+    text-decoration: none;
+    font-family: "Museo", sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: rgba(144, 254, 29, 0.7);
+    padding: 1.5rem;
+    display: block;
+    font-weight: 400; }
+  .nav__link:hover, .nav__link:active {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    font-weight: 500;
+    color: #90fe1d; }
+
+.copyright {
+  background-color: black;
+  opacity: .8;
+  font-family: "Museo", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #6e36f2;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center; }
+
+.copyright a:link, a:visited {
+  text-decoration: none;
+  color: #6e36f2; }
+
+.copyright a:hover {
+  color: #90fe1d; }
+
+.crypto {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, minmax(10rem, minmax(max-content))); }
+  .crypto__img {
+    grid-column: 1/3; }
+  .crypto__header {
+    background-color: #90fe1d;
+    border-radius: 50px;
+    padding: 2rem;
+    height: 5rem;
+    width: 100%;
+    text-align: center; }
+  .crypto__details {
+    grid-column: 3/5;
+    grid-row: 1/2; }
+  .crypto__headline {
+    margin-top: 1rem;
+    font-family: "Museo", sans-serif;
+    font-size: 2.5rem;
+    color: #f9f7f6;
+    padding: 2rem;
+    font-weight: 400;
+    text-align: center;
+    border-radius: 25px; }
+  .crypto__story {
+    grid-column: 2/3;
+    font-family: "Museo", sans-serif;
+    font-size: 1.6rem;
+    color: #f9f7f6;
+    padding: 2rem;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.8); }
+  .crypto__kraken {
+    margin-top: 1.5rem;
+    align-self: center; }
+  .crypto__kraken:hover {
+    filter: brightness(1.5);
+    box-shadow: 0 0 2.5rem 0 #0ff;
+    transform: translateY(-3px); }

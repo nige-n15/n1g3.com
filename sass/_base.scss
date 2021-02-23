@@ -1,0 +1,74 @@
+// COLOR VARIABLES
+$color-primary: #6e36f2;
+$color-primary-dark: #270950;
+$color-primary-light: #f9f7f6;
+
+$primary-rgba: rgba(128,72,255,.5);
+$primary-dark-rgba: rgba(39,9,80,.3);
+
+$color-secondary: #90fe1d;
+$color-secondary-light: #BCFE77;
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483A;
+$color-grey-dark-2: #6D5D4B;
+
+// FONT VARIABLES
+$font-primary: 'Roboto', sans-serif;
+$font-display: 'Museo', sans-serif;
+//RESPNSIVE BREAKPOINTS
+$bp-largest: 75em; // 1200 px
+$bp-large: 62.5em; // 1000 px
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; //600px
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;//So 1 rem = 10px;
+    @media only screen and (max-width: $bp-largest){
+        font-size: 50%;
+    }
+}
+
+body {
+    font-family: $font-primary;
+    color: $color-grey-dark-2;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.container {
+    background-color: $primary-dark-rgba;
+    display: grid;
+    grid-template-rows: 85vh min-content 40vw repeat(4,min-content);
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(3rem,1fr) [center-start] 
+    repeat(9,[col-start] minmax(min-content, 14rem)[col-end]) [center-end] 1fr [full-end];//1140px/8= 14rem or 140px
+
+    & > * {
+        //padding: 40px;
+        //font-size: 3rem;
+    }
+}
+
+.pagecontainer{
+    background-color: $color-secondary-light;
+    display:grid;
+    grid-template-rows:25% 50% 10% 100%;
+    grid-template-columns: [sidebar-start] 4rem [sidebar-end full-start] minmax(15rem, 1fr) [full-end];
+    
+}
+.cryptocontainer{
+    display:grid;
+    grid-template-rows:  25% 50% 10% 100%;
+    grid-template-columns:[sidebar-start] 4rem [sidebar-end full-start] minmax(15rem, 1fr) [full-end];
+
+}

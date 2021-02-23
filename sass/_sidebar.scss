@@ -1,0 +1,23 @@
+.sidebar { 
+	background-color: $color-primary-dark;
+	grid-column: sidebar-start / sidebar-end;
+	grid-row: 1 / -1;
+}
+
+
+.sidebar svg{
+	margin:1.5rem 3px;
+	position: absolute;
+	top: 2rem;
+	left:3.5rem;
+	width:3.5rem;
+	fill:$color-primary;
+	transform:scale(0.8);
+	transition: all .2s
+}
+
+.sidebar svg:hover{
+	transform:scale(1.2);
+	filter: brightness(1.86);
+	cursor: pointer;
+}

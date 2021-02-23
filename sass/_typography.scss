@@ -1,0 +1,91 @@
+
+%heading {
+	font-family: $font-display;
+	font-weight: 400;
+}
+
+.heading-1{
+	@extend %heading;
+	font-size: 3rem;
+	color: $color-primary-light;
+	line-height: 1;
+}
+
+.heading-2{
+	@extend %heading;
+	font-size: 2.5rem;
+	font-style: italic;
+	&--bold{
+		@extend %heading;
+		font-weight:500;
+		font-style:none;
+		font-size: 2.5rem;
+	}
+	&--light{
+		color: $color-primary-light;
+	}
+
+	&--dark{
+		color: $color-grey-dark-1;
+	}
+}
+
+.heading-3{
+	@extend %heading;
+	font-size: 1.6rem;
+	color: $color-primary;
+	text-transform:uppercase;
+	line-height: 1;
+
+		&--light{
+		color: $color-primary-light;
+	}
+}
+
+.heading-4{
+	@extend %heading;
+	font-size: 1.9rem;
+
+	&--light{
+		color: $color-grey-light-1;
+	}
+
+	&--dark{
+		color: $color-grey-dark-1;
+	}
+}
+
+.btn {
+
+	background-color: $color-secondary-light;
+	color: $color-primary;
+	border: none; 
+	border-radius: 0;
+	font-family: $font-display;
+	font-size: 1.5rem;
+	pointer:cursor;
+	text-transform: uppercase;
+	padding: 1.8rem 3rem;
+	transition: all .2s;
+	cursor:pointer;
+	&:hover { 
+		background-color: $color-primary-dark;
+	}
+}
+
+
+.mb-sm{
+	margin-bottom: 2rem;
+}
+
+.mb-md{
+	margin-bottom: 3rem;
+}
+
+.mb-lg{
+	margin-bottom: 4rem;
+}
+
+.mb-xl{
+	margin-bottom: 8rem;
+}
