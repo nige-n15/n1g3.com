@@ -1,5 +1,12 @@
 .links {
-		
+
+	height: 15rem;
+	width: 75rem;
+	grid-row:1/2;
+	grid-column:1/7;
+	@media only screen and (max-width:$bp-medium){
+     	grid-column: full-start / full-end;   
+    }
 	&__desc{
 		color: $color-primary-light;
 		font-size:2rem;
@@ -12,36 +19,38 @@
 	}
 	&__info{
 		margin-left: 3.5rem;
+		display:none;
 	}
-	background-size:cover;
-	background-image: linear-gradient(to top right, rgba($primary-dark-rgba,.9),rgba($color-primary,.7)),url(/img/microchipbg.jpg);
-	grid-column: col-start 7 / full-end;
-	justify-content: middle;
-	vertical-align:center;
+	//background-size:cover;
+	
+	//grid-column: col-start 7 / full-end;
+	  @media only screen and (max-width: $bp-medium){
+
+	  }	
+	//justify-content: middle;
+	//vertical-align:center;
 	&__heading{
-		font-family: 'Roboto';
-		letter-spacing: 2;
+		grid-column: 1/ 12;
+		border-radius:40px;
+		background-image:linear-gradient(to bottom, rgba(#fff,.2), $color-primary);
+		background-size:cover;
+		font-family: $font-display;
 		font-size: 4rem;
-		font-weight:700;
-		text-align:center;
-		display:block;
-		padding:1.5rem 0;
-		background-image: linear-gradient(to top,rgba($color-primary-light,.1),(rgba($color-primary-light,1)));
+		font-weight:500;
+		text-align:left;
+		padding:1.5rem 1rem;
+		color: $color-primary-light;
 	}
 
 	&__list
-	{
-
-	position: relative;
-	top: 0;
-	display: grid;
-	width:80%;
-	margin-left:auto;
-	margin-right:auto;
-	grid-template-columns: 25% 25% 25% 25% ;
-	grid-template-rows: 25% 25% 25% 25%;
-	grid-column-gap:.5rem;
-	}
+	{	
+		margin-left:2rem;
+		margin-bottom:7.5rem;
+		display: grid;
+		grid-template-columns: repeat(7,15rem);
+		grid-template-rows: 25% 25% 25% 25%;
+		grid-column-gap:.5rem;
+		}
 	
 	&__link,
 	&__img{
@@ -55,11 +64,9 @@
 		}*/
 		transition: all .3s;
 		&--bandcamp{
-			margin-left: 8rem;
-			grid-column: 2/ span 1;
-			grid-row: 4/5;
-			transform: translateY(3rem);
-			opacity: .7;
+			grid-column:1/ span 1;
+			grid-row: 3/4;
+			opacity: .8;
 		}
 		&--bandcamp:hover{
 			opacity: 1.2;
@@ -67,16 +74,16 @@
 		}
 		&--soundcloud {
 			background-color: rgba($color-primary,.5);
-			opacity: .7;
-			margin-top: 5rem;
+			opacity: .8;
 			grid-column: 1/ span 1;
-			grid-row: 4 / span 1
+			grid-row: 2 / span 1
 		}
 		&--soundcloud:hover{
 			opacity:1.2;
 			filter:blur(1px);
 		}
 		&--member{
+			display:none;
 			border: 3px solid $color-primary;
 			margin-top:3rem;
 			margin-right: 4rem;
@@ -151,3 +158,11 @@
 		}
 }
 
+.links--2{
+	//display:grid;
+	//grid-row:1/2;
+	//grid-column:1/3;
+	@media only screen and (max-width: $bp-medium){
+
+	}
+}

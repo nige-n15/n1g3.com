@@ -1,8 +1,8 @@
 {
-  "name": "Nexter",
+  "name": "n1g3.com",
   "version": "1.0.0",
-  "description": "Nexter webpage",
-  "main": "index.js",
+  "description": "n1g3.com",
+  "main": "index.html",
   "scripts": {
     "watch:sass": "node-sass sass/main.scss css/style.css -w",
     "devserver": "live-server --browser=firefox",
@@ -12,7 +12,7 @@
     "compress:css": "node-sass css/style.prefix.css css/style.css --output-style compressed",
     "build:css": "npm-run-all compile:sass prefix:css compress:css"
   },
-  "author": "Jonas",
+  "author": "Nigel Russell",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^7.1.4",

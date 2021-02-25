@@ -1,5 +1,11 @@
 .features { 
-	
+	@media only screen and (max-width:$bp-largest){
+		margin:2px;
+		grid-row:4/5;
+		grid-column:full-start/center-end;
+	}
+
+
 	&__heading{
 		font-family: $font-display;
 		font-size: 3rem;
@@ -16,7 +22,12 @@
 
 	}
 	//background-color: $color-grey-light-2;
-	grid-column: center-start / center-end;
+	grid-row:6/7;
+	grid-column: 1/8;
+		@media only screen and (max-width: $bp-largest){
+			grid-column: full-start / col-end 5;
+			grid-row:4/5;
+		}
 	margin: 2rem 2rem;
 	//display: subgrid;
 	display: grid;

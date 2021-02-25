@@ -2,18 +2,33 @@
 	background-color: $color-primary-dark;
 	grid-column: sidebar-start / sidebar-end;
 	grid-row: 1 / -1;
+
+	display:flex;
+	justify-content:center;
+
+	@media only screen and (max-width: $bp-large){
+		grid-column: 1/-1;
+		grid-row: 1/2;
+		justify-content: flex-end;
+		align-items:center;
+	}
+
 }
 
 
 .sidebar svg{
-	margin:1.5rem 3px;
+	margin:1.5rem .5rem;
 	position: absolute;
-	top: 2rem;
 	left:3.5rem;
 	width:3.5rem;
 	fill:$color-primary;
 	transform:scale(0.8);
-	transition: all .2s
+	transition: all .2s;
+		@media only screen and (max-width: $bp-large){
+			margin:0 0;
+			transform:translateY(2.5px);
+			margin-right:3rem;
+	}
 }
 
 .sidebar svg:hover{

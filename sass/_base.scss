@@ -47,28 +47,73 @@ body {
 }
 
 .container {
-    background-color: $primary-dark-rgba;
+    background-color: $color-primary-dark;
     display: grid;
-    grid-template-rows: 85vh min-content 40vw repeat(4,min-content);
-    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(3rem,1fr) [center-start] 
-    repeat(9,[col-start] minmax(min-content, 14rem)[col-end]) [center-end] 1fr [full-end];//1140px/8= 14rem or 140px
+    grid-template-rows: 55vh  60vw repeat(7,min-content) 4vh;
+     //minmax(min-content,max-content) 30vh 4vh;
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem,1fr) [center-start] 
+    repeat(6,[col-start] minmax(min-content, 14rem)[col-end]) [center-end] 1fr [full-end];//1140px/8= 14rem or 140px
 
-    & > * {
-        //padding: 40px;
-        //font-size: 3rem;
+    @media only screen and (max-width: $bp-largest){      
+        //grid-template-rows:[sidebar-start]6rem[sidebar-end] 55vw 55vh 80vh minmax(min-content,max-content) 
+     //minmax(min-content,max-content) 30vh 4vh;
+     grid-template-rows: 55vh 55vh 80vh repeat(7,max-content) 4vh;
+        grid-template-columns:[sidebar-start] 8rem [sidebar-end full-start] minmax(6rem,1fr) [center-start] 
+    repeat(9,[col-start] minmax(min-content, 10rem)[col-end]) [center-end] 1fr [full-end];
+    }
+    @media only screen and (max-width: $bp-large){      
+        //grid-template-rows:[sidebar-start]6rem[sidebar-end] 55vw 55vh 80vh minmax(min-content,max-content) 
+     //minmax(min-content,max-content) 30vh 4vh;
+     grid-template-rows: [sidebar-start] 6rem [sidebar-end] 65vh 55vh 80vh repeat(7,max-content) 4vh;
+        grid-template-columns:repeat(12,1fr);
+    }
+
+    @media only screen and (max-width:$bp-medium){
+        grid-template-rows: [sidebar-start]6rem[sidebar-end] 50vh 50vh 60vh minmax(min-content,max-content) 
+     minmax(min-content,max-content) 40vh 40vh 4vh;
+        grid-template-columns: repeat(16,1fr);
+    }
+
+    @media only screen and (max-width:$bp-small){
+         grid-template-rows: [sidebar-start]6rem[sidebar-end] 65vh 75vh 80vh minmax(min-content,max-content) 
+        minmax(min-content,max-content) 30vh 4vh;
+        grid-template-columns: repeat(18,1fr);     
     }
 }
 
 .pagecontainer{
-    background-color: $color-secondary-light;
+    background-color: $color-primary-dark;
     display:grid;
-    grid-template-rows:25% 50% 10% 100%;
-    grid-template-columns: [sidebar-start] 4rem [sidebar-end full-start] minmax(15rem, 1fr) [full-end];
+    grid-template-rows:[header-start]25%[header-end content-start] 50% [content-end footer-start] 10% [footer-end];    ;
+    grid-template-columns: [sidebar-start] 4rem [sidebar-end full-start]
+    minmax(15rem, 1fr) [full-end];
     
 }
 .cryptocontainer{
+    background-color:$color-grey-dark-2;
     display:grid;
-    grid-template-rows:  25% 50% 10% 100%;
-    grid-template-columns:[sidebar-start] 4rem [sidebar-end full-start] minmax(15rem, 1fr) [full-end];
+    //grid-template-rows:  20vh 25vh repeat(minmax(15rem,min-content),8);
+    //grid-template-columns:[sidebar-start] 4rem [sidebar-end full-start] repeat(minmax(15rem, 1fr),8) [full-end];
+    grid-template-rows: [header-start]min-content [header-end newsfeed-start] min-content [newsfeed-end content-start] min-content [content-end footer-start] max-content [footer-end];
+    grid-template-columns:[sidebar-start] 4rem [sidebar-end full-start] repeat(minmax(15rem, 1fr),8) [full-end];
+
+  //  @media only screen and (max-width: $bp-large){
+   //     grid-template-rows: [header-start]min-content [header-end newsfeed-start] min-content [newsfeed-end content-start] max-content [content-end footer-start] max-content [footer-end];
+   //     grid-template-columns:[sidebar-start] 4rem [sidebar-end full-start] repeat(minmax(15rem, 1fr),8) [full-end];
+  //  }
+
+
+}
+
+.memescontainer{
+    background-color: $color-primary-dark;
+    display:grid;
+    grid-template-rows:auto;
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(5rem, 1fr) [full-end];
+    @media only screen and (max-width: $bp-large){
+        grid-template-rows: auto;
+        grid-template-columns:[sidebar-start] 4rem [sidebar-end full-start] repeat(minmax(15rem, 1fr),8) [full-end];
+    }
+
 
 }

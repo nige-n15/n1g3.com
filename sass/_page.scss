@@ -1,28 +1,33 @@
 
 
-.crypto-page{
-	width:100%;
-	display:grid;
+.cryptopage{
+	background-color: $color-primary-dark;
+	//width:100%;
+	//display:grid;
 
 }
 .page{
 	width: 100%;
 
 	padding: 2rem;
-	display:flex;
-	flex-direction:column;
-	
+	display:grid;
+	grid-template-columns: 1fr repeat(6,25rem) 1fr min-content;
+	grid-template-rows:12.5vh 12.5vh repeat(6, 20rem) repeat(2,1fr);
 	&__content{
-
 		display:grid;
-		grid-template-rows: 5vh 5vh 30vh 30vh 20vh 10vh;
-		grid-template-columns: 1fr;
+		grid-row:2/5;
+		grid-column:1/8;
+		height:20vh;
+		grid-template-columns: repeat(2,1fr);
 		&--links{
 			display:flex;
 			justify-content: start;
 		}
 	}
+
 	&__heading--1{
+		grid-row:1/2;
+		grid-column:1/4;
 		color: $color-primary;
 		padding: 2rem;
 		border-radius:50px;
@@ -31,15 +36,28 @@
 	}
 
 	&__heading--2{
-		text-align:center;
+		grid-column:4/7;
+		grid-row:1/2;
+		text-align:left;
 		text-transform: uppercase;
 		color: $color-secondary;
 		padding: 2rem;
 		border-radius:50px;
 		background-color: $color-primary-dark;
 	}
-	&__content p{
-		margin-top:1rem;
+	&__content--lead{
+
+		font-family: $font-display;
+		font-size: 3rem;
+		color: $color-primary-light;
+		padding: 2rem;
+		border-radius:25px;
+		background-color:rgba(#000,.8);
+
+
+	}
+	&__content--p{
+
 		font-family: $font-display;
 		font-size: 1.6rem;
 		color: $color-primary-light;
@@ -47,16 +65,31 @@
 		border-radius:25px;
 		background-color:rgba(#000,.8);
 	}
+	
+	&__content--partners{
+		list-style:none;
+		grid-column:2/3;
 
+	}
+	&--content--company{
+
+	}
 	&__content--post{
 		display:grid;
-		grid-template-rows: 10% 30% 60%;
+		grid-template-rows: 10% 30%;
+	}
 
-
+	&__content--links{
+		align-self:center;
+		margin-top:45rem;
+		margin-left: -10rem;
+		grid-column:5/8;
+		grid-row: 4/5;
 	}
 
 	button {
 		width:40%;
+		border-radius:30px;
 		margin:1rem 5rem;
 	}
 	&__memes{
